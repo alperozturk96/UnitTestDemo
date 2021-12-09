@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverclockGPUVC" customModule="PcPartsUnitTestDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="clockSpeedTF" destination="azW-iW-hn1" id="Hqg-T6-gEW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voltageTF" destination="Nkc-b0-7dM" id="q3k-mp-k1i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1500" borderStyle="roundedRect" placeholder="Clock Speed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azW-iW-hn1" userLabel="clockSpeedTF">
+                    <rect key="frame" x="20" y="94" width="374" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="NTX-47-29v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-dd-cgd">
+                    <rect key="frame" x="20" y="54" width="374" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zst-WG-cBH">
+                    <rect key="frame" x="40" y="244" width="334" height="35"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="GKo-Xe-5sF"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Set"/>
+                    <connections>
+                        <action selector="overclockGPU" destination="-1" eventType="touchUpInside" id="va8-0f-k7K"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="roundedRect" placeholder="Voltage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nkc-b0-7dM" userLabel="voltageTF">
+                    <rect key="frame" x="20" y="159" width="374" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Vxj-NK-GUQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="azW-iW-hn1" secondAttribute="trailing" constant="20" id="CVB-xT-gjX"/>
+                <constraint firstItem="Nkc-b0-7dM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HS2-HW-gNn"/>
+                <constraint firstItem="azW-iW-hn1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ID1-aQ-1IA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UvZ-dd-cgd" secondAttribute="trailing" constant="20" id="Wa2-a1-JUO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zst-WG-cBH" secondAttribute="trailing" constant="40" id="YNX-3E-efF"/>
+                <constraint firstItem="UvZ-dd-cgd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cU0-2P-Tt6"/>
+                <constraint firstItem="Nkc-b0-7dM" firstAttribute="top" secondItem="azW-iW-hn1" secondAttribute="bottom" constant="20" id="op0-qP-7HV"/>
+                <constraint firstItem="Zst-WG-cBH" firstAttribute="top" secondItem="Nkc-b0-7dM" secondAttribute="bottom" constant="40" id="oyv-ve-99M"/>
+                <constraint firstItem="azW-iW-hn1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="rwt-SR-Qm3"/>
+                <constraint firstItem="Zst-WG-cBH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="uJS-1e-f2C"/>
+                <constraint firstItem="UvZ-dd-cgd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="vfh-RD-lb5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nkc-b0-7dM" secondAttribute="trailing" constant="20" id="ydY-9H-YcD"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="123"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
